@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/game.css">
+
+    <title>Bullseye - Fun Archery Game</title>
+    <meta name="description" content="Bullseye - Enjoy a challenging archery game with exciting targets and confetti celebrations. Aim for the bullseye and compete for the highest score!">
+</head>
+
+<script src="./js/game.js"></script>
+
+<body>
+    <main id="main">
+        <game id="game" class="closed">
+            <targets id="targets"></targets>
+            <score id="points">0</score>
+            <timer id="timer">0:00:00</timer>
+            <progressbar id="progressbar">
+                <bar id="bar" value="0" max="100"></bar>
+            </progressbar>
+        </game>
+
+        <main_menu class="menus" id="main_menu">
+            <logo>
+                <img src="./img/favicon.svg" alt="Bullseye">
+                <span class="title">Bullseye</span>
+                <span class="author">by: Marcel Sibiela</span>
+            </logo>
+            <button id="play">Play</button>
+            <button id="show_highscores">Highscores</button>
+            <button id="show_tutorial">How to play</button>
+        </main_menu>
+
+        <game_over class="closed menus" id="game_over">
+            <label>Game Over</label>
+            <span>Score: <span id="score">0</span></span>
+            <span>Time: <span id="in_time">0:00:00</span></span>
+            <input type="text" id="nickname" placeholder="nickname">
+            <div>
+                <button id="submit_score">Submit</button>
+            </div>
+        </game_over>
+
+        <highscores class="closed menus" id="highscores">
+            <label>Highscores</label>
+            <score_table id="score_table">
+
+            </score_table>
+            <div>
+                <button id="show_mainmenu">Main Menu</button>
+                <button id="play">Play</button>
+            </div>
+        </highscores>
+
+        <tutorial class="closed menus" id="tutorial">
+            <label>How to play</label>
+            <div>
+                <img src="./img/tutorial.png" alt="controls" style="mix-blend-mode: darken;">
+                <div>
+                    <span>Once you hit Play, targets will appear for you to hit</span>
+                    <span>Clicling closer to the center gives you more points and extra time</span>
+                    <span>Once you run out of time the game is over</span>
+                </div>
+            </div>
+            <div>
+                <button id="show_mainmenu">Main Menu</button>
+                <button id="play">Play</button>
+            </div>
+        </tutorial>
+
+
+        
+    </main>
+</body>
+</html>
